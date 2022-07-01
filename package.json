@@ -1,6 +1,31 @@
 {
   "dependencies": {
+    "express": "^4.18.1",
     "ip": "^1.1.8",
     "kafkajs": "^2.0.2"
+  },
+  "name": "nodejs-kafka",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix ../peoplecounting",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alezZzZ/nodejs-kafka.git"
+  },
+  "author": "",
+  "proxy": "http://localhost:4000",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alezZzZ/nodejs-kafka/issues"
+  },
+  "homepage": "https://github.com/alezZzZ/nodejs-kafka#readme",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.18"
   }
 }
